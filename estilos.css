@@ -1,0 +1,100 @@
+* {
+    margin:0;
+    padding:0;
+  }
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    font-family: 'Roboto', sans-serif
+}
+
+.Contenedor {
+    width: 800px; margin: 0 auto;
+    width: 90%;
+    max-width:1000px;
+    margin:20px, auto;
+    display:grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header header header"
+                         "Contenido Contenido sidebar"
+                         "widget-1 widget-2 widget-3"
+                         "footer footer footer";
+
+}
+
+.Contenedor > div,
+.Contenedor> .header,
+.Contenedor> .Contenido,
+.Contenedor> .sidebar,
+.Contenedor> .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.Contenedor .header {
+    background: #E9ECF4;
+    grid-area:header;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #bb2608;
+}
+row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.Contenedor .Contenido{
+    grid-area: Contenido;
+}
+.Contenedor .sidebar {
+    grid-column: 3 / 4;
+   background: #E9ECF4;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100px;
+   grid-area: sidebar;
+}
+row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.Contenedor .widget-1 {
+    background: #0057dc;
+    text-align: center;
+    color: #fef200;
+    grid-area: widget-1;
+}
+.Contenedor .widget-2 {
+    background: #0057dc;
+    text-align: center;
+    color: #fef200;
+    grid-area:widget-2;
+}
+.Contenedor .widget-3{
+    background: #0057dc;
+    text-align: center;
+    color: #fef200;
+    grid-area:widget-3;
+}
+.Contenedor .footer {
+    background: #420b5c;
+    text-align: center;
+    color: #fef200;;
+    grid-area:footer;
+}
+@media screen and (max-with: 568px){
+ Contenedor {grid-template-areas:
+                              "header header header"
+                             "Contenido Contenido Contenido"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-2 widget-3"
+                             "footer footer footer"
+}}
